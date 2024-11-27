@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en" data-theme="light" class="bg-nioprimary dark:bg-niodark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Adhim Niokagi Personal Portfolio Website, contain about passion, journey and biography." />
+    <meta name="keywords" content="Adhim Niokagi, Adhim Niokagi Portfolio, Niokagi, frontend, web developer" />
+    <meta name="author" content="Adhim Niokagi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://adhimniokagi.it.student.pens.ac.id/" />
+    <link rel="icon" type="image/x-icon" href="./src/assets/icons/favicon.ico" />
+    <!-- styling -->
+    <link rel="stylesheet" href="./src/styles/output.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <title>Adhim Niokagi Portfolio Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+    <script>
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme === "dark") {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("theme", "light");
+            } else {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("theme", "dark");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let typingText = document.querySelectorAll('.text-typing');
+
+            typingText.forEach(element => {
+                let typewriter = new Typewriter(element, {
+                    loop: false,
+                    delay: 100,
+                });
+
+                typewriter
+                    .typeString('Front-End Developer')
+                    .start();
+            });
+        });
+    </script>
+    <script type="module" src="./src/js/script.js"></script>
+</head>
+
+<body>
+    <nav id="nav" class="nav">
+        <!-- floating nav -->
+        <section class="transition-none max-md:hidden max-sm:hidden">
+            <a href="/">
+                <h1 class="text-base font-medium md:text-base lg:text-base">
+                    Adhim Niokagi
+                </h1>
+            </a>
+            <div class="icon-group flex gap-4 sm:gap-7">
+                <div class="grid items-center">
+                    <label class="swap swap-rotate">
+                        <!-- use onchange -->
+                        <input type="checkbox" onchange="toggleTheme(this)" />
+                        <svg class="dark:fill-textdark h-[26px] w-[26px] fill-gray-600 swap-on"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z">
+                            </path>
+                        </svg>
+                        <svg class="dark:fill-textdark h-[26px] w-[26px] fill-gray-600 swap-off"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+                <details id="nav-menu-btn" class="dropdown dropdown-end menu-dropdown-toggle">
+                    <summary class="btn bg-transparent border-none m-0 p-0 shadow-none hover:bg-transparent"
+                        onClick="setIsMenuOpen" aria-label="Navbar menu button">
+                        <i
+                            class="bx bx-menu-alt-right cursor-pointer text-[26px] font-medium text-gray-600 transition-all hover:text-gray-400 dark:text-textdark"></i>
+                    </summary>
+                    <!--  -->
+                    <div class="nav-content-modal" tabIndex="0">
+                        <div class="grid grid-cols-3 gap-2 p-5">
+                            <a href="#about" class="menu-item">
+                                <div class="box grid w-[100px] cursor-pointer p-3 text-center">
+                                    <i class="bx bx-face text-3xl"></i>
+                                    <span class="text-xs mt-2">About</span>
+                                </div>
+                            </a>
+                            <a href="#skills" class="menu-item">
+                                <div class="box grid w-[100px] cursor-pointer p-3 text-center">
+                                    <i class="bx bx-code-alt text-3xl"></i>
+                                    <span class="text-xs mt-2">Skills</span>
+                                </div>
+                            </a>
+                            <a href="#experiences" class="menu-item">
+                                <div class="box grid w-[100px] cursor-pointer p-3 text-center">
+                                    <i class="bx bx-briefcase text-3xl"></i>
+                                    <span class="text-xs mt-2">Experiences</span>
+                                </div>
+                            </a>
+                            <a href="#projects" class="menu-item">
+                                <div class="box grid w-[100px] cursor-pointer p-3 text-center">
+                                    <i class="bx bx-blanket text-3xl"></i>
+                                    <span class="text-xs mt-2">Projets</span>
+                                </div>
+                            </a>
+                            <a href="#contacts" class="menu-item">
+                                <div class="box grid w-[100px] cursor-pointer p-3 text-center">
+                                    <i class="bx bx-user-pin text-3xl"></i>
+                                    <span class="text-xs mt-2">Contact</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </nav>
+    <main>
+        <!-- large hero -->
+        <section class="hero">
+            <aside class="sosmed-nav"></aside>
+            <section class="headline">
+                <h1 class="lg-header">Adhim Niokagi</h1>
+                <div class="lg-role">
+                    <div class="xline me-[14px] ms-[-2px] text-gray-500 dark:text-textdark2"></div>
+                    <div class="text-typing"></div>
+                </div>
+                <p class="lg-paragraph">
+                    A Front-End Web Developer & UI/UX Enthusiast, who dedicated to learn more & develops
+                    themself in
+                    this field.
+                </p>
+                <div class="mt-10 flex gap-7 font-medium">
+                    <a href="mailto:niokagi@gmail.com">
+                        <button id="show-chat-modal" role="button" class="hero-hello-btn">
+                            Say Hello
+                            <i class="uil uil-location-arrow md:ms-1 lg:ms-[9.2px]"></i>
+                        </button>
+                    </a>
+                    <!-- <SendmailModal id={"my_modal_1"} /> -->
+                </div>
+            </section>
+            <picture class="hero-pp">
+                <img src="./src/assets/nioka_2.webp" alt="Adhim Niokagi Profile Picture" />
+            </picture>
+        </section>
+
+        <!-- sm hero -->
+        <section class="sm-hero">
+            <section class="avatar-wrap">
+                <aside class="sosmed-nav"></aside>
+                <picture class="sm-avatar">
+                    <img src="./src/assets/nioka_2.webp" alt="Adhim Niokagi Profile Picture" />
+                </picture>
+            </section>
+            <!-- headline  -->
+            <section class="sm-headline">
+                <h1>Adhim Niokagi</h1>
+                <div class="flex max-sm:text-[17.9px] max-miniphone:text-[14px] sm:text-xl">
+                    <div class="xline me-[14px] ms-[-2px] text-gray-500 dark:text-textdark2"></div>
+                    <div class="text-typing"></div>
+                </div>
+                <p
+                    class="text-niogray mt-[18.5px] h-full w-full text-[15px] leading-[26px] dark:text-textdark2 max-sm:text-[16px]">
+                    A Front-End Web Developer & UI/UX Enthusiast, who dedicated to learn & develops themself in this
+                    field.
+                </p>
+                <div class="sm-btn-group">
+                    <button id="sm-open-chat-modal" role="button" class="hello-sm-btn mt-4">
+                        Say Hello <i class="uil uil-location-arrow ms-1"></i>
+                    </button>
+                    <SendmailModal id="my_modal_2" />
+                </div>
+            </section>
+        </section>
+
+        <!-- scroll down btn -->
+        <section class="hero-scroll-btn-group">
+            <button role="button" class="mouse-scroll-btn text-gray-600 dark:text-textdark2" onClick="scrollDown()">
+                <i class="bx bx-mouse me-1 text-2xl"></i>Scroll Down
+                <i class="bx bx-down-arrow-alt ms-1 text-xl"></i>
+            </button>
+        </section>
+        <!-- end of hero -->
+
+        <!-- about me -->
+        <section id="about" class="about-component">
+            <section class="text-left px-6">
+                <h1 class="text-base font-normal text-textdark2 dark:text-textdark2 md:text-xl">
+                    001
+                </h1>
+                <h2 class="mt-[5px] text-2xl max-sm:text-[28px] font-normal text-black dark:text-textdark
+                    max-sm:mt-1 md:text-5xl">
+                    about_me
+                </h2>
+            </section>
+
+            <!-- content -->
+            <section class="about-content">
+                <div class="flex items-center gap-7">
+                    <img src="./src/assets/nioka_2.webp" class="rounded-xl max-sm:w-[75px] sm:w-[100px]"
+                        alt="Adhim Niokagi Photo" />
+                    <div class="cname">
+                        <h1 class="text-[25px] font-bold">nioka.o
+                        </h1>
+                        <div class="tag flex gap-2 mt-2">
+                            <span class="bg-gray-200 dark:bg-niodark2 px-3 py-1 text-xs rounded-md">Front-End</span>
+                            <span class="bg-gray-200 dark:bg-niodark2 px-3 py-1 text-xs rounded-md">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="about-desc-wrapper">
+                    <div class="about-mockup">
+                        <p
+                            class="text-base max-sm:text-[15px] text-justify leading-7 max-md:leading-6 dark:text-textdark3">
+                            I am a student of Electronic Engineering Polytechnic Institute of Surabaya majoring in
+                            informatics Engineering, as well as a Front-End Web Developer and UI/UX Enthusiast, I am
+                            highly dedicated to learn more in this field. I have enough experience with some of the
+                            latest technology frameworks such as ReactJs, Express.js, and some of the latest Javascript
+                            ecosystems.
+                        </p>
+                        <br>
+                        <p
+                            class="text-base max-sm:text-[15px] text-justify leading-7 max-md:leading-6 dark:text-textdark3">
+                            In addition to my technical skills, I've a strong learning passion and
+                            stay updated with industry trends. I am committed to enhancing my expertise and
+                            contributing effectively to innovative projects.
+                        </p>
+                        <a href="./src/assets/adhim_niokagi_cv.pdf">
+                            <button
+                                class="mt-8 max-sm:mt-6 px-6 py-4 max-sm:py-[12px] max-sm:px-[23px] text-sm max-sm:text-[14px] bg-niodark text-nioprimary dark:bg-niodark2 border-none max-sm:rounded-xl dark:text-textdark3 flex items-center gap-2 font-normal rounded-xl active:scale-95 transition-all duration-0">
+                                View CV
+                                <i class="bx bx-file text-lg max-sm:text-base text-textdark dark:text-textdark3"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- end of about -->
+
+        <!-- skills -->
+        <section id="skills" class="skills-component">
+            <!-- head -->
+            <section class="text-left px-6">
+                <h1 class="text-base font-normal text-textdark2 dark:text-textdark2 md:text-xl">
+                    002
+                </h1>
+                <h2 class="mt-[5px] text-2xl max-sm:text-3xl font-normal text-black dark:text-textdark
+                    max-sm:mt-0 md:text-5xl">
+                    technical_skills
+                </h2>
+            </section>
+            <!-- content -->
+            <section class="skills-content-container">
+                <div class="collapse collapse-arrow skill-part">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl max-sm:text-base font-medium">Front-end Development</div>
+                    <div class="collapse-content grid grid-cols-7 max-sm:grid-cols-4">
+                        <img class="skills-icon mt-3" src="./src/assets/icons/html.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/css.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/js.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/Tailw.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/bootstrap.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/reactjs.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/vite.png" />
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow skill-part">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl max-sm:text-base font-medium">Back-End Development</div>
+                    <div class="collapse-content grid grid-cols-7 max-sm:grid-cols-4">
+                        <img class="skills-icon mt-3" src="./src/assets/icons/nodejs.png" />
+                        <img class="skills-icon mt-3 dark:invert" src="./src/assets/icons/Express.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/mongodb.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/MySQL.png" />
+
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow skill-part">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl max-sm:text-base font-medium">Other Tools</div>
+                    <div class="collapse-content grid grid-cols-7 max-sm:grid-cols-4">
+                        <img class="skills-icon mt-3" src="./src/assets/icons/Figma.png" />
+                        <img class="skills-icon mt-3" src="./src/assets/icons/Postman.png" />
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- end of skills -->
+
+        <!-- experiences -->
+        <section id="experiences" class="experiences-component">
+            <!-- part title -->
+            <section class="text-left px-6">
+                <h1 class="text-base font-normal text-textdark2 dark:text-textdark2 md:text-xl">
+                    003
+                </h1>
+                <h2 class="mt-[5px] text-2xl max-sm:text-3xl font-normal text-black dark:text-textdark
+                    max-sm:mt-0 md:text-5xl">
+                    experiences
+                </h2>
+            </section>
+
+            <section class="max-md:mt-10 max-md:px-6 max-sm:mt-10 lg:mt-16 max-sm:mx-0">
+                <div role="tablist" class="tabs tabs-lifted tabs-lg">
+                    <input type="radio" name="my_tabs_2" role="tab"
+                        class="tab font-medium text-base dark:[--tab-bg:#161617] dark:[--tab-border-color:#434346] dark:text-textdark2"
+                        aria-label="Educations" checked="checked" />
+                    <div role="tabpanel"
+                        class="tab-content bg-white border-base-300 rounded-box max-sm:p-7 sm:p-9 pt-8 dark:bg-niodark4 dark:border-borderbtm">
+                        <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
+                            <li>
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="h-5 w-5">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="timeline-start mb-10">
+                                    <time class="font-mono italic">2019 - 2021</time>
+                                    <div class="text-lg font-bold mt-1">SMP Negeri 1 Jetis </div>
+                                    <p class="mb-5 dark:text-textdark4">Regular Student</p>
+                                </div>
+                                <hr class="dark:bg-textdark2" />
+                            </li>
+                            <li>
+                                <hr class="dark:bg-textdark2" />
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="h-5 w-5">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="timeline-start mb-10">
+                                    <time class="font-mono italic">2021 - 2024</time>
+                                    <div class="text-lg font-bold mt-1">SMK Negeri 2 Mojokerto</div>
+                                    <p class="mb-5 dark:text-textdark4">Software Engineering</p>
+                                </div>
+                                <hr class="dark:bg-textdark2" />
+                            </li>
+                            <li>
+                                <hr class="dark:bg-textdark2" />
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="h-5 w-5">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="timeline-start mb-10">
+                                    <time class="font-mono italic">2024 - Present</time>
+                                    <div class="text-lg font-bold mt-1">Electronic Engineering Polytechnic Institute
+                                        of
+                                        Surabaya</div>
+                                    <p class="mb-5 dark:text-textdark4">Associate's degree - Informatics Engineering
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <input type="radio" name="my_tabs_2" role="tab"
+                        class="tab font-medium text-base  dark:[--tab-bg:#161617] dark:[--tab-border-color:#434346] dark:text-textdark2"
+                        aria-label="Experiences" />
+                    <div role="tabpanel"
+                        class="tab-content bg-white border-base-300 dark:bg-niodark4 dark:border-borderbtm rounded-box max-sm:p-7 sm:p-9 pt-8">
+                        <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
+                            <li>
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="h-5 w-5">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="timeline-start mb-10">
+                                    <time class="font-mono italic">Nov 2023 - Present</time>
+                                    <div class="text-lg font-semibold mt-1">Remote Freelance (self employed)</div>
+                                    <p class="mb-5 dark:text-textdark4">Front-End Web Developer</p>
+                                </div>
+                                <hr class="dark:bg-textdark2" />
+                            </li>
+                            <li>
+                                <hr class="dark:bg-textdark2" />
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="h-5 w-5">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="timeline-start mb-10">
+                                    <time class="font-mono italic">Jul 2022 - Dec 2023</time>
+                                    <div class="text-lg font-semibold mt-1">ATR/BPN - Kantor Pertanahan Kota
+                                        Mojokerto</div>
+                                    <p class="mb-5 dark:text-textdark4">Student Intern</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- end of experiences -->
+
+        <!-- projects -->
+        <section id="projects" class="projects-component">
+            <section class="text-left px-6">
+                <h1 class="text-base font-normal text-textdark2 dark:text-textdark2 md:text-xl">
+                    004
+                </h1>
+                <h2 class="mt-[5px] text-2xl max-sm:text-3xl font-normal text-black dark:text-textdark
+                    max-sm:mt-0 md:text-5xl">
+                    projects
+                </h2>
+            </section>
+
+            <!-- content -->
+            <section class="projects-content">
+                <!-- content -->
+                <div
+                    class="card bg-white dark:bg-gradient-to-b from-niodark3 to-niodark4 max-sm:w-full sm:w-[410px] md:w-[450px] border dark:border-borderbtm">
+                    <div class="card-body text-left">
+                        <h1 class="text-6xl sm:text-7xl">Nio <br /> Nime</h1>
+                        <div class="tag flex gap-2 mt-2">
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">Javascript</span>
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">ExpressJS</span>
+                        </div>
+                        <p class="mt-4 text-[13px] font-normal dark:text-textdark4">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit. Esse labore dolorum qui eius officiis</p>
+                        <div class="mt-5 flex justify-between w-full">
+                            <div class="cursor-pointer">
+                                <i class="bx bxl-github text-xl"></i>
+                            </div>
+                            <div class="cursor-pointer">
+                                <i class="bx bx-arrow-back rotate-180 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card bg-white dark:bg-gradient-to-b from-niodark3 to-niodark4 max-sm:w-full sm:w-[410px] md:w-[430px] border dark:border-borderbtm">
+                    <div class="card-body text-left">
+                        <h1 class="text-6xl sm:text-7xl">Nio <br /> Libs</h1>
+                        <div class="tag flex gap-2 mt-2">
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">Javascript</span>
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">ExpressJS</span>
+                        </div>
+                        <p class="mt-4 text-[13px] font-normal dark:text-textdark4">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit. Esse labore dolorum qui eius officiis</p>
+                        <div class="mt-5 flex justify-between w-full">
+                            <div class="cursor-pointer">
+                                <i class="bx bxl-github text-xl"></i>
+                            </div>
+                            <div class="cursor-pointer">
+                                <i class="bx bx-arrow-back rotate-180 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card bg-white dark:bg-gradient-to-b from-niodark3 to-niodark4 max-sm:w-full sm:w-[410px] md:w-[450px] border dark:border-borderbtm">
+                    <div class="card-body text-left">
+                        <h1 class="text-6xl sm:text-7xl">N <br /> Quiz</h1>
+                        <div class="tag flex gap-2 mt-2">
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">Java</span>
+                            <span class="bg-gray-100 dark:bg-borderbtm  px-3 py-1 text-xs rounded-md">Kotlin</span>
+                        </div>
+                        <p class="mt-4 text-[13px] font-normal dark:text-textdark4">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit. Esse labore dolorum qui eius officiis</p>
+                        <div class="mt-5 flex justify-between w-full">
+                            <div class="cursor-pointer">
+                                <i class="bx bxl-github text-xl"></i>
+                            </div>
+                            <div class="cursor-pointer">
+                                <i class="bx bx-arrow-back rotate-180 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-nioprimary dark:bg-niodark max-sm:w-full sm:w-[410px] text-center h-full py-12">
+                    <div class="my-auto">
+                        <i class="bx bxs-ghost text-9xl max-sm:text-8xl text-gray-300 dark:text-ghostdark"></i>
+                        <h1
+                            class="text-2xl max-sm:text-xl md:text-3xl mt-5 text-gray-300 dark:text-ghostdark font-bold">
+                            What's
+                            next?</h1>
+                        <p class="text-base max-sm:text-sm text-gray-300 dark:text-ghostdark">Let's collaborate w/ me
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- end of projects -->
+
+        <!-- floating button -->
+        <button id="btn-to-top" class="button-go-top hidden" onclick="scrollToTop()"
+            aria-label="Button for going top of page">
+            <i class="bx bxs-chevron-up text-xl font-bold max-sm:text-sm"></i>
+        </button>
+        <!-- end of floating button -->
+        <!-- contact / get in touch -->
+        <!-- <section id="contacts" class="contacts-component">
+            <section class="text-left px-6">
+                <h1 class="text-base font-normal text-textdark2 dark:text-textdark2 md:text-xl">
+                    004
+                </h1>
+                <h2 class="mt-[5px] text-2xl max-sm:text-3xl font-normal text-black dark:text-textdark
+                    max-sm:mt-0 md:text-5xl">
+                    get_in_touch
+                </h2>
+            </section>
+            
+            <section class="contacts-content">
+                <div
+                    class="card bg-base-100 w-full shadow-sm border dark:bg-gradient-to-b from-niodark3 to-niodark4 dark:border-borderbtm lg:py-3">
+                    <div class="card-body flex flex-col justify-center items-center max-sm:py-12">
+                        <h2 class="card-title"><i class='bx bxl-whatsapp text-6xl text-gray-400'></i></h2>
+                        <div class="grid gap-1 text-center mt-2">
+                            <h3 class="font-semibold md:text-lg max-sm:text-base text-textdark2">WhatsApp</h3>
+                            <a href="#" class="flex items-center gap-1">
+                                <p class="max-sm:text-xs text-sm text-textdark2">Write me text
+                                </p>
+                                <i class='bx bx-arrow-back rotate-180 text-sm text-textdark4'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card bg-base-100 w-full shadow-sm border dark:bg-gradient-to-b from-niodark3 to-niodark4 dark:border-borderbtm lg:py-3">
+                    <div class="card-body flex flex-col justify-center items-center max-sm:py-12">
+                        <h2 class="card-title"><i class='bx bx-mail-send text-6xl text-gray-400'></i></h2>
+                        <div class="grid gap-1 text-center mt-2">
+                            <h3 class="font-semibold md:text-lg max-sm:text-base text-textdark2">Email</h3>
+                            <a href="#" class="flex items-center gap-1">
+                                <p class="max-sm:text-xs text-sm text-textdark2">Write me text
+                                </p>
+                                <i class='bx bx-arrow-back rotate-180 text-sm text-textdark4'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="card bg-base-100 w-full shadow-sm border dark:bg-gradient-to-b from-niodark3 to-niodark4 dark:border-borderbtm lg:py-3">
+                    <div class="card-body flex flex-col justify-center items-center max-sm:py-12">
+                        <h2 class="card-title"><i class='bx bxl-telegram text-6xl text-gray-400'></i></h2>
+                        <div class="grid gap-1 text-center mt-2">
+                            <h3 class="font-semibold md:text-lg max-sm:text-base text-textdark2">Telegram</h3>
+                            <a href="#" class="flex items-center gap-1">
+                                <p class="max-sm:text-xs text-sm text-textdark2">Write me text
+                                </p>
+                                <i class='bx bx-arrow-back rotate-180 text-sm text-textdark4'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section> -->
+        <!-- end of contact -->
+    </main>
+    <footer>
+        <section class="foot-header">
+            <h1>
+                < Adhim Niokagi />
+            </h1>
+            <h2>&copy; Adhim Niokagi. All rights reserved</h2>
+            <br><br>
+            <!-- <p class="text-[12px] text-gray-400">&copy; Adhim Niokagi. All rights reserved</p> -->
+        </section>
+    </footer>
+    <!-- bottom nav -->
+    <div id="backdrop-blur" class="backdrop-blur hidden"></div>
+    <div class="bottom-nav">
+        <section class="b-nav-shadow flex h-[60px] w-full items-center justify-between px-7">
+            <a href="/">
+                <h1 class="font-semibold dark:text-textdark4 max-sm:text-sm md:text-lg lg:text-lg">
+                    nioka.o
+                </h1>
+            </a>
+            <!-- icon group -->
+            <div class="icon-group flex items-center gap-5 sm:gap-7">
+                <label class="swap swap-rotate mt-[-0.5px]" htmlFor="toggletheme">
+                    <input id="toggletheme" aria-label="toggletheme" type="checkbox" onchange="toggleTheme(this)" />
+                    <svg class="dark:fill-textdark4 swap-on h-[21.5px] w-[21.5px] fill-gray-600"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                    <svg class="dark:fill-textdark4 swap-off h-[22px] w-[22px]fill-gray-600"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                </label>
+                <button id="bottom-nav-btn" class="mt-1" aria-label="Menu button">
+                    <i
+                        class="bx bx-category cursor-pointer text-[22px] font-medium text-gray-600 transition-all hover:text-gray-400 dark:text-textdark4"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- bottom draweer -->
+        <div id="bottom-nav" class="bottom-drawer translate-y-full">
+            <!-- drawer content -->
+            <div class="rounded-t-3xl bg-white dark:bg-niodark3 dark:shadow-sm">
+                <div
+                    class="swipper relative top-[10px] mx-auto mt-10 h-[5.5px] w-[70px] rounded-full bg-gray-200 dark:bg-textdark2">
+                </div>
+                <!-- content wrapper -->
+                <div class="h-[240px] rounded-t-3xl px-4 pt-8">
+                    <div class="grid grid-cols-3 justify-items-center gap-4 px-4 mt-1">
+                        <a href="#about" class="text-gray-600 hover:text-gray-400 bottom-menu-item">
+                            <div
+                                class="box grid w-[100px] basis-1/3 cursor-pointer p-3 text-center text-gray-600 dark:text-textdark2">
+                                <i class="bx bx-face text-3xl"></i>
+                                <span class="mt-[6px] text-sm">about</span>
+                            </div>
+                        </a>
+                        <a href="#skills" class="text-gray-600 hover:text-gray-400 bottom-menu-item">
+                            <div
+                                class="box grid w-[100px] basis-1/3 cursor-pointer p-3 text-center text-gray-600 dark:text-textdark2">
+                                <i class="bx bx-code-alt text-3xl"></i>
+                                <span class="mt-[6px] text-sm">skills</span>
+                            </div>
+                        </a>
+                        <a href="#experiences" class="text-gray-600 hover:text-gray-400 bottom-menu-item">
+                            <div
+                                class="box grid w-[100px] basis-1/3 cursor-pointer p-3 text-center text-gray-600 dark:text-textdark2">
+                                <i class="bx bx-briefcase text-3xl"></i>
+                                <span class="mt-[6px] text-sm">experiences</span>
+                            </div>
+                        </a>
+                        <a href="#projects" class="text-gray-600 hover:text-gray-400 bottom-menu-item">
+                            <div
+                                class="box grid w-[100px] basis-1/3 cursor-pointer p-3 text-center text-gray-600 dark:text-textdark2">
+                                <i class="bx bx-blanket text-3xl"></i>
+                                <span class="mt-[6px] text-sm">projects</span>
+                            </div>
+                        </a>
+                        <a href="#contacts" class="text-gray-600 hover:text-gray-400 bottom-menu-item">
+                            <div
+                                class="box grid w-[100px] basis-1/3 cursor-pointer p-3 text-center text-gray-600 dark:text-textdark2">
+                                <i class="bx bx-user-pin text-3xl"></i>
+                                <span class="mt-[6px] text-sm">contacts</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
