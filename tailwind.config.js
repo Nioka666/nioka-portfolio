@@ -22,6 +22,7 @@ export default {
         // niodark2: "#2d2d2d",
         niodark3: "#222225",
         niodark4: "#161617",
+        textdark0: "#747474",
         textdark: "#d6d6d6",
         textdark2: "#8f8f8f",
         textdark3: "#bfc0c3",
