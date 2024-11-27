@@ -69,6 +69,7 @@ bottomNavBtn.addEventListener('click', function () {
     bottomNav.classList.toggle('translate-y-0');
     backdrop.classList.toggle('hidden');
     backdrop.classList.toggle('visible');
+    document.body.classList.add('overflow-hidden');
 });
 
 menuLinks.forEach(link => {
@@ -77,6 +78,8 @@ menuLinks.forEach(link => {
         bottomNav.classList.remove('translate-y-0');
         backdrop.classList.add('hidden');
         backdrop.classList.remove('visible');
+        document.body.classList.remove('overflow-hidden');
+
     });
 });
 
@@ -86,6 +89,8 @@ document.addEventListener('click', function (event) {
         bottomNav.classList.remove('translate-y-0');
         backdrop.classList.add('hidden');
         backdrop.classList.remove('visible');
+        document.body.classList.remove('overflow-hidden');
+
     }
 });
 

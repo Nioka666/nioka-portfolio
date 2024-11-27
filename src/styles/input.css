@@ -197,10 +197,10 @@
     @apply text-center;
   }
   section.foot-header h1 {
-    @apply text-lg font-medium sm:text-lg md:text-2xl;
+    @apply text-base font-medium sm:text-lg md:text-2xl;
   }
   section.foot-header h2 {
-    @apply text-[12px] text-gray-400 sm:text-sm mt-1;
+    @apply text-[10px] text-gray-400 sm:text-sm mt-1;
   }
 }
 
