@@ -9,6 +9,7 @@ export default {
       screens: {
         miniphone: "350px",
         nionotebook: "1140px",
+        macAir: "1290px"
       },
       borderWidth: {
         1: "1.8px",

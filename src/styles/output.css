@@ -5131,36 +5131,12 @@ div.skill-part:is(.dark *){
     margin-top: 2.5rem;
   }
 
-  .max-lg\:w-\[\]{
-    width: ;
-  }
-
-  .max-lg\:w-\[400px\]{
-    width: 400px;
-  }
-
-  .max-lg\:w-\[300px\]{
-    width: 300px;
-  }
-
-  .max-lg\:w-\[320px\]{
-    width: 320px;
-  }
-
-  .max-lg\:w-\[330px\]{
-    width: 330px;
-  }
-
   .max-lg\:w-\[340px\]{
     width: 340px;
   }
 }
 
 @media not all and (min-width: 768px){
-  .max-md\:mt-10{
-    margin-top: 2.5rem;
-  }
-
   .max-md\:hidden{
     display: none;
   }
@@ -5285,10 +5261,6 @@ div.skill-part:is(.dark *){
     width: 100px;
   }
 
-  .sm\:w-\[410px\]{
-    width: 410px;
-  }
-
   .sm\:gap-7{
     gap: 1.75rem;
   }
@@ -5311,18 +5283,6 @@ div.skill-part:is(.dark *){
 @media (min-width: 768px){
   .md\:ms-1{
     margin-inline-start: 0.25rem;
-  }
-
-  .md\:w-\[430px\]{
-    width: 430px;
-  }
-
-  .md\:w-\[450px\]{
-    width: 450px;
-  }
-
-  .md\:w-\[440px\]{
-    width: 440px;
   }
 
   .md\:text-3xl{
@@ -5381,5 +5341,11 @@ div.skill-part:is(.dark *){
 @media (min-width: 1140px){
   .nionotebook\:text-\[21px\]{
     font-size: 21px;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:text-\[22px\]{
+    font-size: 22px;
   }
 }

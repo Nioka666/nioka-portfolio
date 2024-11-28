@@ -90,7 +90,6 @@ document.addEventListener('click', function (event) {
         backdrop.classList.add('hidden');
         backdrop.classList.remove('visible');
         document.body.classList.remove('overflow-hidden');
-
     }
 });
 
@@ -116,6 +115,4 @@ btnToTop.addEventListener("click", function () {
         behavior: "smooth",
     });
 });
-
-// skill section
 
